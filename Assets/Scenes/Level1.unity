@@ -105478,7 +105478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cherries: 0'
+  m_text: 'Heart: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2828552c0d72042648105c46de735eca, type: 2}
   m_sharedMaterial: {fileID: -8766855243054849582, guid: 2828552c0d72042648105c46de735eca, type: 2}

@@ -6,7 +6,7 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     private int cherries = 0;
-    private int hearts = 0;
+    private int hearts;
 
     [SerializeField] private TMP_Text cherriesText;
 
