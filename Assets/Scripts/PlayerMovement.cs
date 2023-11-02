@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-    private SpriteRenderer sprite;
+    public SpriteRenderer sprite;
     private Animator anim;
 
     [SerializeField] private LayerMask jumpableGround;
 
-    private float dirX = 0f;
+    public float dirX = 0f;
     [SerializeField] float movespeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 

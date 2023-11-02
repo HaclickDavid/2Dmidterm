@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Group4 midterm 2D Project
+  m_text: 110703012 2D Project
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2828552c0d72042648105c46de735eca, type: 2}
   m_sharedMaterial: {fileID: -8766855243054849582, guid: 2828552c0d72042648105c46de735eca, type: 2}
