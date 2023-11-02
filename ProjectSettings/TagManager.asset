@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Cherry
   - Trap
-  - Heart
+  - Terrain
+  - Dog
   layers:
   - Default
   - TransparentFX
@@ -49,7 +50,4 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 2036839995
-    locked: 0
-  - name: Trap
-    uniqueID: 942008967
     locked: 0

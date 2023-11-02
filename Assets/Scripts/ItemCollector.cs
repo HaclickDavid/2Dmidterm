@@ -6,7 +6,6 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     private int cherries = 0;
-    private int hearts;
 
     [SerializeField] private TMP_Text cherriesText;
 
@@ -17,12 +16,6 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             cherries++;
             cherriesText.text = "Cherries: " + cherries;
-        }
-        if (collision.gameObject.CompareTag("Heart"))
-        {
-            Destroy(collision.gameObject);
-            hearts++;
-            cherriesText.text = "Heart: " + hearts;
         }
     }
 }
