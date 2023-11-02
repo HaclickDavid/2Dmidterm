@@ -406,6 +406,7 @@ MonoBehaviour:
     m_Bits: 64
   movespeed: 7
   jumpForce: 14
+  myHeartCount: {fileID: 11400000, guid: b39f8cc5d8365994190b5d7a942a27ad, type: 2}
 --- !u!95 &115279327
 Animator:
   serializedVersion: 5
@@ -439,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac1920464b8a473c84a16a67bf88cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHeartCount: {fileID: 11400000, guid: b39f8cc5d8365994190b5d7a942a27ad, type: 2}
   cherriesText: {fileID: 2062121824}
 --- !u!114 &115279329
 MonoBehaviour:
@@ -452,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a701a041e85054dd0976d2f5931727a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHeartCount: {fileID: 11400000, guid: b39f8cc5d8365994190b5d7a942a27ad, type: 2}
 --- !u!1 &165440849
 GameObject:
   m_ObjectHideFlags: 0
@@ -105625,6 +105628,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3467990895935089406, guid: fa404a0f4f6dc4359bd384d19487886a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3882177456871438133, guid: fa404a0f4f6dc4359bd384d19487886a, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -105669,6 +105676,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7769104842567610463, guid: fa404a0f4f6dc4359bd384d19487886a, type: 3}
+      propertyPath: winHeart
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769104842567610463, guid: fa404a0f4f6dc4359bd384d19487886a, type: 3}
+      propertyPath: myHeartCount
+      value: 
+      objectReference: {fileID: 11400000, guid: b39f8cc5d8365994190b5d7a942a27ad, type: 2}
     m_RemovedComponents:
     - {fileID: 2789092083876923265, guid: fa404a0f4f6dc4359bd384d19487886a, type: 3}
     m_RemovedGameObjects: []

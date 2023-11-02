@@ -17,13 +17,20 @@ public class PlayerMovement : MonoBehaviour
 
     private enum MovementState { idle, running, jumping, falling }
 
+    public HeartCount myHeartCount;
+    
+    public GameObject heart;
+
     // Start is called before the first frame update
     private void Start()
     {
+        myHeartCount.finishHeartNow = 0;
+        myHeartCount.heartThisStage = 0;
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        myHeartCount.stageNow = 1;
     }
 
     // Update is called once per frame
@@ -74,5 +81,22 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Trigger")){
+            Debug.Log("Enter");
+            ShootHeart(other.gameObject.transform.position);
+        }
+    }
+    
+    public void ShootHeart(Vector3 t){
+        if(myHeartCount.allHeartNow>0){
+            myHeartCount.allHeartNow --;
+            Debug.Log("Shoot");
+            var g = Instantiate(heart);
+            g.transform.position = this.gameObject.transform.position;
+            g.GetComponent<heartTrigger>().HeartMove(t);
+
+        }
     }
 }

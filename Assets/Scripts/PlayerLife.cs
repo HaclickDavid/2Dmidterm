@@ -7,6 +7,8 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    public HeartCount myHeartCount;
+
 
     private void Start()
     {
@@ -28,6 +30,9 @@ public class PlayerLife : MonoBehaviour
     {
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+        myHeartCount.heartThisStage = 0;
+        myHeartCount.finishHeartNow = 0;
+        myHeartCount.allHeartNow = myHeartCount.heartNotThisStage + myHeartCount.heartThisStage;
     }
 
     private void RestartLevel()

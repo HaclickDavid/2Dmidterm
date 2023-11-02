@@ -6,10 +6,15 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     private int cherries = 0;
-    private int hearts;
+    private int hearts = 0;
+    public HeartCount myHeartCount;
 
     [SerializeField] private TMP_Text cherriesText;
 
+    private void Update() {
+        cherriesText.text = "Heart: " + myHeartCount.allHeartNow;
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Cherry"))
@@ -22,7 +27,9 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             hearts++;
-            cherriesText.text = "Heart: " + hearts;
+            myHeartCount.heartThisStage ++;
+            myHeartCount.allHeartNow ++;
+            cherriesText.text = "Heart: " + myHeartCount.allHeartNow;
         }
     }
 }
